@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 
   tasks: any = [];
   task: any = {};
+  task_d: any = {};
 
   getTasksFromService() {
     let observable = this._httpService.getTasks();
@@ -52,14 +53,15 @@ onButtonClickGetAllTasks(): void {
   console.log("Dentro de onButtonClickGetAllTasks");
   // llama el método de servicio para publicar los datos, pero asegúrate que los datos están agrupados en un objeto
   let observable = this._httpService.getTasks();
-  observable.subscribe(data => console.log("Got our data in onButtonClickGetAllTasks!", data));
+  //observable.subscribe(data => console.log("Got our data in onButtonClickGetAllTasks!", data));
+  observable.subscribe(data => this.tasks = data);
 }
 
 onButtonClickGetTask(_id: string): void {
   console.log("Dentro de onButtonClickGetTask: " +_id);
   // llama el método de servicio para publicar los datos, pero asegúrate que los datos están agrupados en un objeto
   let observable = this._httpService.getTaskById(_id);
-  observable.subscribe(data => console.log("Got our data in onButtonClickGetTask!", data));
+  observable.subscribe(data => this.task_d = data);
 }
 
 

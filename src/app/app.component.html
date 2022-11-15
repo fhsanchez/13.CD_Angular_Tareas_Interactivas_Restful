@@ -12,15 +12,15 @@
     <table>
       <tr *ngFor="let task of tasks">
         <td>{{task.title}}</td>
-        <td><span (click)="onButtonClickGetTask('636f90e5cf3f25fa130cb635')" class="show">SHOW</span></td>
+        <td><span (click)="onButtonClickGetTask(task._id)" class="show">SHOW</span></td>
       </tr>
 
     </table>
   </div>
 
   <div class="task_detail">
-    <label>{{task.title}}</label>
-    <label>{{task.description}}</label>
+    <label>{{task_d.title}}</label>
+    <label>{{task_d.description}}</label>
   </div>
 
 

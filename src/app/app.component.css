@@ -25,6 +25,7 @@
   height: 80px;
   border: 3px solid rgb(48, 30, 210);
   border-radius: 10px;
+
 }
 
 ul {
@@ -40,10 +41,12 @@ ul {
 }
 
 .btn_all_tasks{
-  background-color: blueviolet;
+
   color: white;
   width: 150px;
   height: 30px;
+  cursor: pointer;
+  background-color: blueviolet;
 }
 
 .lista_tasks{
