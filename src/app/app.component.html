@@ -1,0 +1,33 @@
+<div class="container">
+  <div>
+    <h1>Restful Tasks API</h1>
+
+  </div>
+  <div class="all_tasks">
+    <button class="btn_all_tasks" (click)="onButtonClickGetAllTasks()">GET ALL TASKS</button>
+  </div>
+
+
+  <div class="lista_tasks">
+    <table>
+      <tr *ngFor="let task of tasks">
+        <td>{{task.title}}</td>
+        <td><span (click)="onButtonClickGetTask('636f90e5cf3f25fa130cb635')" class="show">SHOW</span></td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class="task_detail">
+    <label>{{task.title}}</label>
+    <label>{{task.description}}</label>
+  </div>
+
+
+
+  <!-- {{tasks | json}} -->
+
+
+
+
+</div>
